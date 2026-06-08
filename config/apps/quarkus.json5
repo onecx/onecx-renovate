@@ -9,21 +9,25 @@
     "dockerfile": {
         "fileMatch": ["^src/main/docker/.*Dockerfile$", "^src/main/docker/Dockerfile.*"]
     },
+    "platformAutomerge": true,
     "packageRules": [
         {
             "matchManagers": ["maven"],
             "matchPaths": ["/"],
-            "labels": ["dependencies"]
+            "labels": ["dependencies"],
+            "automerge": true
         },
         {
             "matchManagers": ["dockerfile"],
             "labels": ["docker-image"],
-            "versioning": "semver"
+            "versioning": "semver",
+            "automerge": true
         },
         {
             "matchManagers": ["helmv3"],
             "matchPaths": ["src/main/helm/**"],
-            "labels": ["helm"]
+            "labels": ["helm"],
+            "automerge": true
         }
     ],
     "dependencyDashboard": false,
