@@ -1,0 +1,31 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":disableDependencyDashboard",
+        "group:monorepos",
+        "group:recommended"
+    ],
+    "dockerfile": {
+        "fileMatch": ["^src/main/docker/.*Dockerfile$", "^src/main/docker/Dockerfile.*"]
+    },
+    "packageRules": [
+        {
+            "matchManagers": ["maven"],
+            "matchPaths": ["/"],
+            "labels": ["dependencies"]
+        },
+        {
+            "matchManagers": ["dockerfile"],
+            "labels": ["docker-image"],
+            "versioning": "semver"
+        },
+        {
+            "matchManagers": ["helmv3"],
+            "matchPaths": ["src/main/helm/**"],
+            "labels": ["helm"]
+        }
+    ],
+    "dependencyDashboard": false,
+    "labels": ["renovate"]
+}
