@@ -4,7 +4,7 @@ module.exports = {
     gitAuthor: 'Renovate <tkit-dev@1000kit.org>',
     onboarding: false,
     autodiscover: true,
-    autodiscoverNamespace: 'onecx',
+    autodiscoverNamespaces: ['onecx'],
     autodiscoverFilter: [
         "onecx/onecx-tenant-*",
     ],
