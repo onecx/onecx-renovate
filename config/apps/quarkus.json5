@@ -12,8 +12,13 @@
     "platformAutomerge": true,
     "packageRules": [
         {
+            "matchManagers": ["github-actions"],
+            "enabled": false
+        },
+        {
             "matchManagers": ["maven"],
-            "matchPaths": ["/"],
+            "matchDepTypes": ["parent"],
+            "matchDepNames": ["org.tkit.onecx:onecx-quarkus3-parent"],
             "labels": ["dependencies"],
             "automerge": true
         },
