@@ -6,6 +6,6 @@ module.exports = {
     autodiscover: true,
     autodiscoverNamespaces: ['onecx'],
     autodiscoverFilter: [
-        "onecx/onecx-tenant-*",
+        "onecx/test-renovate",
     ],
 }
