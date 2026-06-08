@@ -17,7 +17,7 @@
         },
         {
             "matchManagers": ["maven"],
-            "matchDepTypes": ["parent"],
+            "matchDepTypes": ["parent", "parent-root"],
             "matchDepNames": ["org.tkit.onecx:onecx-quarkus3-parent"],
             "labels": ["dependencies"],
             "automerge": true
