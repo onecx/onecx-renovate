@@ -7,10 +7,17 @@ jobs:
   renovate:
     runs-on: ubuntu-latest
     steps:
+      - name: Get token
+        id: get_token
+        uses: actions/create-github-app-token@v3
+        with:
+          private-key: ${{ secrets.private_key }}
+          client-id: ${{ secrets.client_id }}
+          owner: ${{ github.repository_owner }}
       - name: Checkout
         uses: actions/checkout@v6.0.3
       - name: Renovate
         uses: renovatebot/github-action@v46.1.15
         with:
           configurationFile: config/renovate/config.js
-          token: ${{ secrets.RENOVATE_TOKEN }}
+          token: ${{ steps.get_token.outputs.token }}
