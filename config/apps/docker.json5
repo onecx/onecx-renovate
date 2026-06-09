@@ -17,7 +17,7 @@
             "matchPackagePatterns": ["registry\\.access\\.redhat\\.com"],
             "fileMatch": ["Dockerfile$"],
             "labels": ["docker-image"],
-            "versioning": "redhat",
+            "versioning": "loose",
             "automerge": false
         },
         {
