@@ -9,6 +9,7 @@ module.exports = {
         "onecx/*-svc",
         "onecx/*-operator",
         "onecx/*-legacy",
+        "onecx/onecx-test-oidc",
         "onecx/onecx-db-check",
         "onecx/test-renovate",
     ],
