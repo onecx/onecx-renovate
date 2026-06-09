@@ -1,0 +1,30 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":disableDependencyDashboard",
+        "group:monorepos",
+        "group:recommended"
+    ],
+    "platformAutomerge": true,
+    "packageRules": [
+        {
+            "matchManagers": ["github-actions"],
+            "enabled": false
+        },
+        {
+            "matchManagers": ["dockerfile"],
+            "labels": ["docker-image"],
+            "versioning": "semver",
+            "automerge": true
+        },
+        {
+            "matchManagers": ["helmv3"],
+            "matchPaths": ["helm/**"],
+            "labels": ["helm"],
+            "automerge": true
+        }
+    ],
+    "dependencyDashboard": false,
+    "labels": ["renovate"]
+}

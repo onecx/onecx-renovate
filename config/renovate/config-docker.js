@@ -5,6 +5,7 @@ module.exports = {
     autodiscover: true,
     autodiscoverNamespaces: ['onecx'],
     autodiscoverFilter: [
-        "onecx/test-renovate",
+        "onecx/docker-*",
     ],
+    enabledManagers: ['dockerfile'],
 }
