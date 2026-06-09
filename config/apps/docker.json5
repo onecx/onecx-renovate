@@ -14,10 +14,19 @@
         },
         {
             "matchManagers": ["dockerfile"],
+            "matchPackagePatterns": ["registry\\.access\\.redhat\\.com"],
+            "fileMatch": ["Dockerfile$"],
             "labels": ["docker-image"],
-            "versioning": "docker",
+            "versioning": "redhat",
             "automerge": false
         },
+        {
+            "matchManagers": ["dockerfile"],
+            "fileMatch": ["Dockerfile$"],
+            "labels": ["docker-image"],
+            "versioning": "loose",
+            "automerge": false
+        }
     ],
     "dependencyDashboard": false,
     "labels": ["renovate"]
