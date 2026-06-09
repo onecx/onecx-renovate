@@ -16,7 +16,7 @@
             "matchManagers": ["dockerfile"],
             "labels": ["docker-image"],
             "versioning": "docker",
-            "automerge": true
+            "automerge": false
         },
     ],
     "dependencyDashboard": false,
