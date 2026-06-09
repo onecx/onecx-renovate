@@ -23,6 +23,15 @@
         },
         {
             "matchManagers": ["dockerfile"],
+            "matchPackageNames": ["nginxinc/nginx-unprivileged"],
+            "fileMatch": ["Dockerfile$"],
+            "labels": ["docker-image"],
+            "versioning": "docker",
+            "allowedVersions": "/-alpine$/",
+            "automerge": false
+        },
+        {
+            "matchManagers": ["dockerfile"],
             "fileMatch": ["Dockerfile$"],
             "labels": ["docker-image"],
             "versioning": "loose",
