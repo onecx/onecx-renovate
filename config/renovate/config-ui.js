@@ -6,6 +6,7 @@ module.exports = {
     autodiscoverNamespaces: ['onecx'],
     autodiscoverFilter: [
         "onecx/*-ui",
+        "!onecx-shell-ui",
     ],
     enabledManagers: ['dockerfile', 'helmv3'],
 }
