@@ -6,7 +6,8 @@ module.exports = {
     autodiscoverNamespaces: ['onecx'],
     autodiscoverFilter: [
         "onecx/*-ui",
-        "!onecx-shell-ui",
+        "!onecx/onecx-shell-ui",
+        "!onecx/docs-*",
     ],
     enabledManagers: [],
 };
