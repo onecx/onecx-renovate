@@ -9,5 +9,5 @@ module.exports = {
         "!onecx/onecx-shell-ui",
         "!onecx/docs-*",
     ],
-    enabledManagers: [],
+    enabledManagers: ['dockerfile','helmv3'],
 };
