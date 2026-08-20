@@ -18,7 +18,7 @@
             "fileMatch": ["Dockerfile$"],
             "labels": ["docker-image"],
             "versioning": "redhat",
-            "allowedVersions": "/^\\d+\\.\\d+-\\d+\\.\\d+$/",
+            "allowedVersions": "/^\\d+(\\.\\d+-\\d+(\\.\\d+)?)?$/",
             "automerge": false
         },
         {
