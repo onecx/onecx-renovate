@@ -11,6 +11,7 @@ module.exports = {
         "onecx/*-legacy",
         "onecx/onecx-test-oidc",
         "onecx/onecx-db-check",
+        "onecx/onecx-service-redirect",
     ],
     enabledManagers: ['maven','dockerfile','helmv3'],
 }
